@@ -1,0 +1,2 @@
+from microros import init_ros_mp_event_system
+init_ros_mp_event_system()
