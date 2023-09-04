@@ -5,6 +5,9 @@ import utime
 import _thread
 import gc
 
+def ros_event_callback(data):
+    print("Ros did something")
+    print(readObjFromThread())
 
 
 print("\r\nInit Event Queue")
@@ -23,10 +26,7 @@ def ros_event_thread():
     createObjFromThread()
     print(readObjFromThread())
 
-    def ros_event_callback(data):
-        print("Ros did something")
-        print(readObjFromThread())
-   
+
     print("\r\nRegistgering Event Subscription")
     registerEventSubscription("CmdVel", "Twist", ros_event_callback)
     
